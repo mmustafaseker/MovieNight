@@ -23,5 +23,6 @@ namespace MovieNight.Models
         public string Plot { get; set; }
         public string Country { get; set; }
 
+        public virtual ICollection<ApplicationUser>  Fans{ get; set; }
     }
 }

@@ -22,14 +22,14 @@ namespace MovieNight.Models
                     roleManager.Create(new IdentityRole("admin"));
                 }
 
-                if (!context.Users.Any(x => x.UserName == "admin@kod.fun"))
+                if (!context.Users.Any(x => x.UserName == "admin@mustafaseker.net"))
                 {
                     var userStore = new UserStore<ApplicationUser>(context);
                     var userManager = new UserManager<ApplicationUser>(userStore);
                     var adminUser = new ApplicationUser()
                     {
-                        UserName = "admin@kod.fun",
-                        Email = "admin@kod.fun",
+                        UserName = "admin@mustafaseker.net",
+                        Email = "admin@mustafaseker.net",
                         EmailConfirmed = true
                     };
                     userManager.Create(adminUser, "P@ssword1");
